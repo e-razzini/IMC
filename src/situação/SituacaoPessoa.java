@@ -11,8 +11,13 @@ ImcCalculos ic = new ImcCalculos(ind);
 
 double resultado;
 
+    public SituacaoPessoa(ImcCalculos ic) {
+       
+    }
 
-    public double getResultado() {
+
+    public double getResultado(Individuo ind) {
+        
     return this.resultado;
     }
 
