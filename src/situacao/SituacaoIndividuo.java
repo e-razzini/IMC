@@ -6,7 +6,7 @@ import modelo.Individuo;
 
 
 public class SituacaoIndividuo {
-    
+
   Individuo ind = new Individuo();
   ImcCalculos ic = new ImcCalculos(ind);   
     
@@ -19,7 +19,7 @@ public class SituacaoIndividuo {
 
     public String situacaoPessoa(){
         
-                    if( resultado >= 18.5 &  resultado <=24.9){    
+            if( resultado >= 18.5 &  resultado <=24.9){    
             
               situacao ="Peso normal.";
             
