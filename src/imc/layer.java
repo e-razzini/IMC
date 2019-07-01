@@ -3,6 +3,7 @@ package imc;
 
 import imcanalize.ImcCalculos;
 import modelo.Individuo;
+import situacao.SituacaoIndividuo;
 
 
 public class layer extends javax.swing.JFrame {
@@ -133,12 +134,14 @@ public class layer extends javax.swing.JFrame {
         
         ind.setAltura(altura);
         ind.setPeso(peso);
+        
         ImcCalculos imc = new ImcCalculos(ind); 
         double resultado = imc .calculo();
-        
-       
+              
         saidaImc.setText("" + resultado);  
-      
+        SituacaoIndividuo si = new SituacaoIndividuo();
+        String situacao ="";
+        Situa.setText(""+ situacao);
     }//GEN-LAST:event_BotaoCalcActionPerformed
 
     public static void main(String args[]) {

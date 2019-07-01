@@ -12,15 +12,14 @@ public class SituacaoIndividuo {
     
    String situacao ="";
    double resultado = ic.calculo();
-   
-    public String getSituacao() {
-        return this.situacao;
+
+    public SituacaoIndividuo(Individuo ind) {
+        this.ind = ind;
     }
 
-    public void setSituacao(String situacao) {
-       
+    public String situacaoPessoa(){
         
-            if( resultado >= 18.5 &  resultado <=24.9){    
+                    if( resultado >= 18.5 &  resultado <=24.9){    
             
               situacao ="Peso normal.";
             
@@ -41,8 +40,16 @@ public class SituacaoIndividuo {
               
 
             }
+
+        
+        
+      return situacao;
     
-       this.situacao = situacao;
+      
     
-}
+    
+    }
+   
+  
+    
 }
