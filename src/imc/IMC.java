@@ -17,7 +17,7 @@ public class IMC {
     SituacaoIndividuo si = new SituacaoIndividuo(ind);
     double resultado;
     resultado = ic.calculo();
-    String situacao="";     
+    String Situacao="";     
 
     }
     
