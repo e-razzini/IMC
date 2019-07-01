@@ -4,6 +4,7 @@ package imc;
 import imcanalize.ImcCalculos;
 import modelo.Individuo;
 
+
 public class layer extends javax.swing.JFrame {
 
   
@@ -121,7 +122,7 @@ public class layer extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotaoCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoCalcActionPerformed
-    
+     
         double altura = 
         Double.parseDouble(entrAltura.getText());
 
@@ -131,11 +132,12 @@ public class layer extends javax.swing.JFrame {
         
         ind.setAltura(altura);
         ind.setPeso(peso);
-        ImcCalculos imc = new ImcCalculos(ind);
+        ImcCalculos imc = new ImcCalculos(ind); 
         double resultado = imc .calculo();
-        String situa = null;
+        
+       
         saidaImc.setText("" + resultado);  
-        Situa.setText(""+ situa);
+      
     }//GEN-LAST:event_BotaoCalcActionPerformed
 
     public static void main(String args[]) {
