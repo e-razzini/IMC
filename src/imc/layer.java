@@ -24,6 +24,8 @@ public class layer extends javax.swing.JFrame {
         BotaoCalc = new javax.swing.JButton();
         NumeroImc = new javax.swing.JLabel();
         saidaImc = new javax.swing.JLabel();
+        SaidaSitua = new javax.swing.JLabel();
+        Situa = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculo IMC");
@@ -51,12 +53,21 @@ public class layer extends javax.swing.JFrame {
         saidaImc.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         saidaImc.setText("(numero)");
 
+        SaidaSitua.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        SaidaSitua.setText("Saida situação:");
+
+        Situa.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        Situa.setText("(situação)");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(entrPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -67,12 +78,13 @@ public class layer extends javax.swing.JFrame {
                                 .addGap(25, 25, 25)
                                 .addComponent(entrAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(NumeroImc, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(NumeroImc, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(SaidaSitua, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(saidaImc, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(entrPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(saidaImc, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Situa, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(19, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -98,7 +110,11 @@ public class layer extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(NumeroImc)
                     .addComponent(saidaImc))
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SaidaSitua)
+                    .addComponent(Situa))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
@@ -117,9 +133,9 @@ public class layer extends javax.swing.JFrame {
         ind.setPeso(peso);
         ImcCalculos imc = new ImcCalculos(ind);
         double resultado = imc .calculo();
-
-        saidaImc.setText("" + resultado);
-       
+        String situa = null;
+        saidaImc.setText("" + resultado);  
+        Situa.setText(""+ situa);
     }//GEN-LAST:event_BotaoCalcActionPerformed
 
     public static void main(String args[]) {
@@ -157,6 +173,8 @@ public class layer extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoCalc;
     private javax.swing.JLabel NumeroImc;
+    private javax.swing.JLabel SaidaSitua;
+    private javax.swing.JLabel Situa;
     private javax.swing.JTextField entrAltura;
     private javax.swing.JTextField entrPeso;
     private javax.swing.JSeparator jSeparator1;
