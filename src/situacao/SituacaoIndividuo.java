@@ -18,38 +18,27 @@ public class SituacaoIndividuo {
     }
 
     public String situacaoPessoa(){
-        
-            if( resultado >= 18.5 &  resultado <=24.9){    
-            
-              situacao ="Peso normal.";
-            
-            }else if( resultado >= 25 &  resultado <=29.9){
-            
-              situacao ="Sobrepeso.";
-              
-            }else if(resultado >= 30 & resultado <=34.9){
-                
-              situacao ="Obesidade grau um";
-             
-            }else if (resultado >=35 & resultado <=39.9){
-            
-             situacao ="Obesidade grau dois";
-            } else if (resultado >=40) {      
-            
-               situacao ="Obesidade grau Três";
-              
 
-            }
+if( resultado >= 18.5 &  resultado <=24.9){    
 
-        
-        
-      return situacao;
-    
-      
-    
-    
-    }
-   
-  
-    
+situacao ="Peso normal.";
+
+}else if( resultado >= 25 &  resultado <=29.9){
+
+situacao ="Sobrepeso.";
+
+}else if(resultado >= 30 & resultado <=34.9){
+
+situacao ="Obesidade grau um";
+
+}else if (resultado >=35 & resultado <=39.9){
+
+situacao ="Obesidade grau dois";
+} else if (resultado >=40) {      
+
+situacao ="Obesidade grau Três";
+
+}
+return situacao;
+}
 }
