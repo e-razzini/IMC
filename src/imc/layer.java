@@ -4,8 +4,6 @@ package imc;
 import imcanalize.ImcCalculos;
 import modelo.Individuo;
 
-
- */
 public class layer extends javax.swing.JFrame {
 
   
