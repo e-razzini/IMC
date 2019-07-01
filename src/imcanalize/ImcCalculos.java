@@ -22,7 +22,7 @@ private Individuo ind;
       
             if( resultado >= 18.5 &  resultado <=24.9)    
             {
-              System.out.println("Peso normal.");
+             System.out.println("Peso normal.");
             }else if( resultado >= 25 &  resultado <=29.9)
             {
               System.out.println("Sobrepeso.");
