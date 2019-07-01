@@ -139,7 +139,7 @@ public class layer extends javax.swing.JFrame {
         double resultado = imc .calculo();
               
         saidaImc.setText("" + resultado);  
-        SituacaoIndividuo si = new SituacaoIndividuo();
+        SituacaoIndividuo si = new SituacaoIndividuo(ind);
         String situacao ="";
         Situa.setText(""+ situacao);
     }//GEN-LAST:event_BotaoCalcActionPerformed
