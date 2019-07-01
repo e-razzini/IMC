@@ -18,7 +18,7 @@ public class IMC {
     double resultado;
     resultado = ic.calculo();
     String Situacao="";     
-    //teste de netbeans****
+   // anterado pelo netbeans####
     }
     
 }
