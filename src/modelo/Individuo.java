@@ -7,7 +7,7 @@ private double altura;
 private double peso;
 
     public double getAltura() {
-        return this.altura;
+        return altura;
     }
 
     public void setAltura(double altura) {
@@ -15,7 +15,7 @@ private double peso;
     }
 
     public double getPeso() {
-        return this.peso;
+        return peso;
     }
 
     public void setPeso(double peso) {
