@@ -17,7 +17,7 @@ public class IMC {
     SituacaoIndividuo si = new SituacaoIndividuo(ind);
     double resultado;
     resultado = ic.calculo();
-    String Situacao="";     
+    String Situa="";     
    // anterado pelo netbeans####
     }
     
