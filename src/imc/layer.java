@@ -135,13 +135,13 @@ public class layer extends javax.swing.JFrame {
         
         ind.setAltura(altura);
         ind.setPeso(peso);
-        
-        ImcCalculos imc = new ImcCalculos(ind); 
-        double resultado = imc .calculo();
-              
-        saidaImc.setText("" + resultado);  
         SituacaoIndividuo s = new SituacaoIndividuo(ind);
-        String situa =null;
+       
+        ImcCalculos imc = new ImcCalculos(ind); 
+        double resultado = imc.calculo();
+         String situa =null;      
+        saidaImc.setText("" + resultado);  
+        
         
         Situa.setText(""+ situa);
     }//GEN-LAST:event_BotaoCalcActionPerformed
