@@ -8,13 +8,14 @@ import modelo.Individuo;
 public class SituacaoIndividuo {
 private Individuo ind;
  
-  ImcCalculos ic = new ImcCalculos(ind);   
+    
 
 
     public SituacaoIndividuo(Individuo ind) {
         this.ind = ind;
     }
  private String pessoa(){
+  ImcCalculos ic = new ImcCalculos(ind); 
      
  double resultado = ic.calculo();     
  String situa =""; 

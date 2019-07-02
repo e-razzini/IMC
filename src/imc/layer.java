@@ -139,7 +139,7 @@ public class layer extends javax.swing.JFrame {
        
         ImcCalculos imc = new ImcCalculos(ind); 
         double resultado = imc.calculo();
-         String situa =null;      
+         String situa ="";      
         saidaImc.setText("" + resultado);  
         
         
