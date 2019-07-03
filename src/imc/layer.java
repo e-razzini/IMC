@@ -138,9 +138,10 @@ public class layer extends javax.swing.JFrame {
         
        
         ImcCalculos imc = new ImcCalculos(ind); 
-        double resultado = imc.calculo();
+        double resultado= peso / (altura * altura);
+       
          String situa ="";      
-        saidaImc.setText("" + resultado);  
+         saidaImc.setText("" + resultado);  
         
         
         Situa.setText(""+ situa);

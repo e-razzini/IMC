@@ -10,7 +10,7 @@ private String situa;
 
 
     public double getAltura() {
-        return altura;
+        return this.altura;
     }
 
     public void setAltura(double altura) {
@@ -18,7 +18,7 @@ private String situa;
     }
 
     public double getPeso() {
-        return peso;
+        return this. peso;
     }
 
     public void setPeso(double peso) {
