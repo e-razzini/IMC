@@ -8,6 +8,7 @@ private double peso;
 private Double resultado;
 private String situa;
 
+
     public double getAltura() {
         return altura;
     }
@@ -22,22 +23,24 @@ private String situa;
 
     public void setPeso(double peso) {
         this.peso = peso;
-        this.setSitua();
+     
     }
 
     public Double getResultado() {
-        return resultado;
+        return (this.peso /(this.altura *this.altura));
     }
 
     public void setResultado(Double resultado) {
         this.resultado = resultado;
+         this.setSitua();
     }
 
     public String getSitua() {
         return situa;
     }
 
-    public void setSitua() {
+   private void setSitua() {
+        
        if( resultado >= 18.5 &  resultado <=24.9){    
 
 situa ="Peso normal.";

@@ -4,21 +4,17 @@ package imc;
 import imcanalize.ImcCalculos;
 
 import modelo.Individuo;
-import situacao.SituacaoIndividuo;
-
-
 
 public class IMC {
 
     public static void main(String[] args) {
     
     Individuo ind = new Individuo();
-    ImcCalculos ic = new ImcCalculos(ind);
-    SituacaoIndividuo si = new SituacaoIndividuo(ind);
+    ImcCalculos ic = new ImcCalculos(ind);   
+    String Situa="";  
     double resultado;
     resultado = ic.calculo();
-    String Situa="";     
-   // anterado pelo netbeans####
+   
+  
     }
-    
 }
