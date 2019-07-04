@@ -132,19 +132,19 @@ public class layer extends javax.swing.JFrame {
         Double.parseDouble(entrPeso.getText()); 
         
         Individuo ind = new Individuo();
-        
+         String situacao =""; 
         ind.setAltura(altura);
         ind.setPeso(peso);
-        
+        ind.setSituacao(situacao);
        
         ImcCalculos imc = new ImcCalculos(ind); 
         double resultado= peso / (altura * altura);
        
-         String situa ="";      
+             
          saidaImc.setText("" + resultado);  
         
         
-        Situa.setText(""+ situa);
+        Situa.setText(""+ situacao);
     }//GEN-LAST:event_BotaoCalcActionPerformed
 
     public static void main(String args[]) {

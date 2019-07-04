@@ -6,7 +6,7 @@ public class Individuo {
 private double altura;
 private double peso;
 private Double resultado;
-private String situa;
+private String situacao;
 
 
     public double getAltura() {
@@ -27,45 +27,41 @@ private String situa;
     }
 
     public Double getResultado() {
-        return (this.peso /(this.altura *this.altura));
+        return this.resultado ;
     }
 
     public void setResultado(Double resultado) {
         this.resultado = resultado;
-         this.setSitua();
+        
     }
 
-    public String getSitua() {
-        return situa;
+    public String getSituacao() {
+        return this. situacao;
     }
 
-   private void setSitua() {
+    public void  setSituacao(String situacao) {
         
        if( resultado >= 18.5 &  resultado <=24.9){    
 
-situa ="Peso normal.";
+situacao ="Peso normal.";
 
 }else if( resultado >= 25 &  resultado <=29.9){
 
-situa ="Sobrepeso.";
+situacao ="Sobrepeso.";
 
 }else if(resultado >= 30 & resultado <=34.9){
 
-situa ="Obesidade grau um";
+situacao ="Obesidade grau um";
 
 }else if (resultado >=35 & resultado <=39.9){
 
-situa ="Obesidade grau dois";
+situacao ="Obesidade grau dois";
 } else if (resultado >=40) {      
 
-situa ="Obesidade grau Três";
+situacao ="Obesidade grau Três";
 
 }
-   
-        
-    }
-
-   
-
-    
+     this.situacao=situacao;
+           
+}    
 }

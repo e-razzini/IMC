@@ -11,10 +11,9 @@ public class IMC {
     
     Individuo ind = new Individuo();
     ImcCalculos ic = new ImcCalculos(ind);   
-    String Situa="";  
+   
     double resultado;
     resultado = ic.calculo();
-   
   
     }
 }
