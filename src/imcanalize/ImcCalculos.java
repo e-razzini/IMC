@@ -16,6 +16,8 @@ private Individuo ind;
     double altura = this.ind.getAltura();
     double peso = this.ind.getPeso();
     double resultado=peso / (altura* altura);   
-    return resultado;           
+    return resultado;   
+   
     }
+     String situacao="";
 }

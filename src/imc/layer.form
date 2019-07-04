@@ -47,9 +47,9 @@
                                   <Component id="SaidaSitua" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="saidaImc" min="-2" pref="159" max="-2" attributes="0"/>
-                                  <Component id="Situa" min="-2" pref="84" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="saidaImc" pref="159" max="32767" attributes="0"/>
+                                  <Component id="saidaSituacao" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -90,7 +90,7 @@
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="SaidaSitua" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Situa" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="saidaSituacao" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="48" max="32767" attributes="0"/>
           </Group>
@@ -160,7 +160,7 @@
         <Property name="text" type="java.lang.String" value="Saida situa&#xe7;&#xe3;o:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="Situa">
+    <Component class="javax.swing.JLabel" name="saidaSituacao">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Dialog" size="14" style="1"/>

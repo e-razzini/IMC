@@ -14,6 +14,6 @@ public class IMC {
    
     double resultado;
     resultado = ic.calculo();
-  
+    String situacao="";
     }
 }

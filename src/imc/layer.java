@@ -27,7 +27,7 @@ public class layer extends javax.swing.JFrame {
         NumeroImc = new javax.swing.JLabel();
         saidaImc = new javax.swing.JLabel();
         SaidaSitua = new javax.swing.JLabel();
-        Situa = new javax.swing.JLabel();
+        saidaSituacao = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculo IMC");
@@ -59,8 +59,8 @@ public class layer extends javax.swing.JFrame {
         SaidaSitua.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         SaidaSitua.setText("Saida situação:");
 
-        Situa.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        Situa.setText("(situação)");
+        saidaSituacao.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        saidaSituacao.setText("(situação)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,9 +83,9 @@ public class layer extends javax.swing.JFrame {
                                     .addComponent(NumeroImc, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(SaidaSitua, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(saidaImc, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Situa, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(saidaImc, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                                    .addComponent(saidaSituacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(54, 54, 54)
                         .addComponent(entrAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -116,7 +116,7 @@ public class layer extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SaidaSitua)
-                    .addComponent(Situa))
+                    .addComponent(saidaSituacao))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
@@ -124,18 +124,18 @@ public class layer extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotaoCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoCalcActionPerformed
-     
+       
         double altura = 
         Double.parseDouble(entrAltura.getText());
 
         double peso = 
         Double.parseDouble(entrPeso.getText()); 
-        
+        String situacao =""; 
         Individuo ind = new Individuo();
-         String situacao =""; 
+        
         ind.setAltura(altura);
         ind.setPeso(peso);
-        ind.setSituacao(situacao);
+    
        
         ImcCalculos imc = new ImcCalculos(ind); 
         double resultado= peso / (altura * altura);
@@ -144,7 +144,7 @@ public class layer extends javax.swing.JFrame {
          saidaImc.setText("" + resultado);  
         
         
-        Situa.setText(""+ situacao);
+        saidaSituacao.setText(""+ situacao);
     }//GEN-LAST:event_BotaoCalcActionPerformed
 
     public static void main(String args[]) {
@@ -183,12 +183,12 @@ public class layer extends javax.swing.JFrame {
     private javax.swing.JButton BotaoCalc;
     private javax.swing.JLabel NumeroImc;
     private javax.swing.JLabel SaidaSitua;
-    private javax.swing.JLabel Situa;
     private javax.swing.JTextField entrAltura;
     private javax.swing.JTextField entrPeso;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel pAltura;
     private javax.swing.JLabel pPeso;
     private javax.swing.JLabel saidaImc;
+    private javax.swing.JLabel saidaSituacao;
     // End of variables declaration//GEN-END:variables
 }
