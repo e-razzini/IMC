@@ -20,7 +20,6 @@ public class layer extends javax.swing.JFrame {
 
         pAltura = new javax.swing.JLabel();
         pPeso = new javax.swing.JLabel();
-        entrAltura = new javax.swing.JTextField();
         entrPeso = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         BotaoCalc = new javax.swing.JButton();
@@ -28,6 +27,7 @@ public class layer extends javax.swing.JFrame {
         saidaImc = new javax.swing.JLabel();
         SaidaSitua = new javax.swing.JLabel();
         saidaSituacao = new javax.swing.JLabel();
+        entrAltura = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculo IMC");
@@ -35,12 +35,14 @@ public class layer extends javax.swing.JFrame {
         setResizable(false);
 
         pAltura.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        pAltura.setForeground(new java.awt.Color(255, 255, 255));
         pAltura.setText("Digite a sua altura: ");
 
         pPeso.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        pPeso.setForeground(new java.awt.Color(255, 255, 255));
         pPeso.setText("Digite seu peso :");
 
-        entrAltura.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        entrPeso.setBackground(new java.awt.Color(102, 102, 102));
 
         BotaoCalc.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         BotaoCalc.setText("calcular");
@@ -62,44 +64,47 @@ public class layer extends javax.swing.JFrame {
         saidaSituacao.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         saidaSituacao.setText("(situação)");
 
+        entrAltura.setBackground(new java.awt.Color(102, 102, 102));
+        entrAltura.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(BotaoCalc, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(144, 144, 144))
-            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addComponent(BotaoCalc, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(125, 125, 125))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jSeparator1)
+                        .addComponent(pAltura, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
+                        .addComponent(pPeso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(NumeroImc, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(SaidaSitua, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(saidaImc, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(saidaSituacao, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jSeparator1)
-                            .addComponent(pAltura, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
-                            .addComponent(pPeso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(NumeroImc, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(SaidaSitua, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(saidaImc, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                                    .addComponent(saidaSituacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                        .addGap(37, 37, 37)
+                        .addComponent(entrPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(entrAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(entrPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                        .addGap(33, 33, 33)
+                        .addComponent(entrAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49)))
+                .addGap(17, 17, 17))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(18, 18, 18)
                 .addComponent(pAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(entrAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -117,34 +122,39 @@ public class layer extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SaidaSitua)
                     .addComponent(saidaSituacao))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotaoCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoCalcActionPerformed
-       
+        
+         
+         
         double altura = 
         Double.parseDouble(entrAltura.getText());
 
         double peso = 
         Double.parseDouble(entrPeso.getText()); 
-        String situacao =""; 
-        Individuo ind = new Individuo();
+  
+       String situacao =""; 
+       Individuo ind = new Individuo();
         
         ind.setAltura(altura);
         ind.setPeso(peso);
-    
-       
+        
         ImcCalculos imc = new ImcCalculos(ind); 
         double resultado= peso / (altura * altura);
-       
+        ind.setSituacao(resultado);
+        
+              
+        
              
          saidaImc.setText("" + resultado);  
         
         
-        saidaSituacao.setText(""+ situacao);
+        saidaSituacao.setText(""+ ind.getSituacao());
     }//GEN-LAST:event_BotaoCalcActionPerformed
 
     public static void main(String args[]) {

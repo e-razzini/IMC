@@ -39,9 +39,9 @@ private String situacao;
         return this. situacao;
     }
 
-    public void  setSituacao(String situacao) {
+    public void  setSituacao(double resultado) {
         
-       if( resultado >= 18.5 &  resultado <=24.9){    
+if( resultado >= 18.5 &  resultado <=24.9){    
 
 situacao ="Peso normal.";
 
